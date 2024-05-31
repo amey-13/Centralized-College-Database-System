@@ -1,0 +1,34 @@
+[
+  {
+    "question": "What is the size of float and double in java ?",
+    "a": "32 and 64",
+    "b": "32 and 32",
+    "c": "64 and 64",
+    "d": "64 and 32",
+    "n": 1
+  },
+  {
+    "question": "Select the valid statement.",
+    "a": "char[] ch = new char(5)",
+    "b": "char[] ch = new char[5]",
+    "c": "char[] ch = new char()",
+    "d": "char[] ch = new char[]",
+    "n": 2
+  },
+  {
+    "question": "Select the valid statement to declare and initialize an array.",
+    "a": "int[] A = {}",
+    "b": "int[] A = {1, 2, 3}",
+    "c": "int[] A = (1, 2, 3)",
+    "d": "int[][] A = {1,2,3}",
+    "n": 3
+  },
+  {
+    "question": "Arrays in java are ______",
+    "a": "Object references",
+    "b": "objects",
+    "c": "Primitive data type",
+    "d": "None",
+    "n": 4
+  }
+]
