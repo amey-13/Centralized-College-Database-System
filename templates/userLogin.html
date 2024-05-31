@@ -1,0 +1,113 @@
+{% include 'Navbar.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<meta charset="ISO-8859-1">
+<title>Login Here</title>
+<style>
+.card {
+	/* 	border-radius: 50px 20px; */
+	padding: 10px;
+	/* border: 2px solid blue; */
+}
+
+.form-control {
+	border-radius: 0px;
+}
+
+.form-control:hover {
+	border-radius: 5px;
+}
+
+.bg-img {
+	background-image: url('https://www.uu.edu/dept/compscience/images/2020/header-cybersecurity-1200-1.jpg');
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+body {
+	overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+
+  
+	<div class="row">
+		<div class="col-md-7">
+			<div class="container-fluid bg-img"></div>
+		</div>
+		<div class="col-md-5 mt-5">
+
+			<div class="container-fluid">
+
+				<div class="text-center">
+
+					<h1 style="color: #007bff;font-family: cursive;font-size: xx-large;"></h1>
+
+						<div class="text-center h3" style="color: {{color}};">{{message}}</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 offset-md-3">
+						<div class="card border-0">
+							<div class="card-body">
+
+								
+								 <form action="userLogin1" method="post">
+									<div class="form-group">
+										<label>Email</label> <input type="email" required="required"
+											class="form-control border-left-0 border-top-0 border-right-0"
+											id="email" aria-describedby="emailHelp"
+											name="email" autofocus="on" ">
+
+
+									</div>
+                  <br>
+
+									<div class="form-group">
+
+										<label for="exampleInput Password1">Password</label> <input
+											required="required" type="password"
+											class="form-control border-left-0 border-top-0 border-right-0"
+											id="password" name="password" /> <br> 
+										
+									</div>
+                  <br>
+                  <center>
+									<button type="submit" 
+										class="btn btn-primary btn-block">
+										<h4>&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;</h4>
+									</button>
+                  </center>
+									<br>
+				
+
+									<hr>
+									
+
+								</form>
+								<center>
+									<a href="userRegister" class="btn btn-success ">
+										<h4>&nbsp;&nbsp;Create New Account&nbsp;&nbsp;</h4>
+									</a>
+
+								</center>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

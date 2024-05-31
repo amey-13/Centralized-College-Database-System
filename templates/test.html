@@ -1,0 +1,131 @@
+{% include 'Usernavbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="ISO-8859-1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #b8c6db;
+            font-family: 'Poppins', sans-serif;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+           
+            margin: 0;
+        }
+        
+        .quiz-container {
+            background-color: rgb(191, 240, 218);
+            border-radius: 10px;
+            box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+            width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .quiz-header {
+            padding: 1.6rem;
+        }
+        
+        label {
+            color: #00203FFF;
+        }
+        
+        h2 {
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        ul li {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        
+        ul li label {
+            cursor: pointer;
+        }
+        button {
+            color: #2d63c8;
+            background-color: #b8c6db;
+            font-size: 19px;
+            border: 1px solid #2d63c8;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width:230px;
+        }
+        button:hover {
+            color: #2d63c8;
+            background-color: #ffffff;
+        }
+        
+     
+    </style>
+<script>
+    let score =new Map();
+    console.log(score)
+    function scorere(e){
+        
+        score[e.value]=e.id;
+    }
+
+    function ret(){
+        return JSON.stringify(score);
+    }
+</script>
+</head>
+<body>   
+
+{% set selectedQuiz=get_questions(examsubject)%}
+<div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+        {% for item in selectedQuiz%}
+        <div class="card p-2 border-0"  style="background-color: rgb(191, 240, 218); font-family: 'Times New Roman', Times, serif;">
+            <ul>
+                <li>
+                    <label style="font-size: x-large;" for="a" id="a_text">{{item.n}}.&nbsp;&nbsp;{{item.question}}</label>
+                </li>
+                <li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input onclick="scorere(this)" type="radio" value={{item.n}} id="a">
+                    <label id="a_text">&nbsp;&nbsp;{{item.a}}</label>
+                </li>
+                <li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input onclick="scorere(this)" type="radio" value={{item.n}} id="b">
+                    <label id="b_text">&nbsp;&nbsp;{{item.b}}</label>
+                </li>
+                <li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input onclick="scorere(this)" type="radio" value={{item.n}} id="c">
+                    <label id="c_text">&nbsp;&nbsp;{{item.c}}</label>
+                </li>
+                <li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input onclick="scorere(this)" type="radio" value={{item.n}} id="d">
+                    <label id="d_text">&nbsp;&nbsp;{{item.d}}</label>
+                </li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+    <div >
+        <center>
+        <a href="/finish?subject={{examsubject}}&instructor_id={{instructor_id}}&score=" onclick="location.href=this.href+ret();return false;"><button style="font-weight: bold;" type="button">Finish</button></a>
+    </center>
+    </div>
+    <br>
+</div>
+<br>
+</body>

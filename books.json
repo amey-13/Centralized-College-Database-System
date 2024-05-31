@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "640ab8da3988ffedf75c719a"
+  },
+  "book_Name": "Rich Dad Poor Dad",
+  "auteur": "Robert Kiyosaki",
+  "total_copy": "45",
+  "price": "2",
+  "description": "Rich Dad Poor Dad is Robert's story of growing up with two dads — his real father and the father of his best friend, his rich dad — and the ways in which both men shaped his thoughts about money and investing. The book explodes the myth that you need to earn a high income to be rich and explains the difference between working for money and having your money work for you.",
+  "present_copy": "45",
+  "date_added": {
+    "$date": "2023-03-09T22:58:02.573Z"
+  }
+},{
+  "_id": {
+    "$oid": "640ab9793988ffedf75c719b"
+  },
+  "book_Name": "Think Like a Monk",
+  "auteur": "Jay Shetty",
+  "total_copy": "34",
+  "price": "3",
+  "description": "Combining ancient wisdom and his own rich experiences in the ashram, Think Like a Monk reveals how to overcome negative thoughts and habits, and access the calm and purpose that lie within all of us.",
+  "present_copy": "34",
+  "date_added": {
+    "$date": "2023-03-09T23:00:41.258Z"
+  }
+}]

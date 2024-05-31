@@ -1,0 +1,96 @@
+{% include 'Usernavbar.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<meta charset="ISO-8859-1">
+
+<style>
+
+    .card{
+        background-color:white;
+        width:100%;
+        border-radius:5px;
+        box-shadow: 0px 0px 10px black;
+        z-index:-50000000;
+      }
+
+      
+body {
+	overflow: hidden;
+}
+
+
+p{
+  text-align: justify;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+  color: darkslategray;
+}
+button {
+	color: #2d63c8;
+	background-color: black;
+	font-size: 19px;
+	border: 1px solid #2d63c8;
+	padding: 10px 20px;
+	cursor: pointer;
+	width:200px;
+}
+button:hover {
+	color: #2d63c8;
+	background-color: #ffffff;
+}
+h2{
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9cm;
+  color: #2d63c8;
+}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <br>
+  <br>
+  <center>
+    <h1 style="color: rgb(75, 0, 128); font-family: 'Times New Roman', Times, serif; text-align: center;">Strat Exam</h1>
+  </center>
+  <br>
+  <div class="row" >
+      <br>
+      <br>
+    <div  class="col-md-3">
+
+    </div>
+          <div class="col-md-6">
+              <div class="card">
+                  <div class="card-body">
+                      <h2 class="card-title" style="color: rgb(75, 0, 128); font-family: 'Times New Roman', Times, serif; text-align: center;">{{examsubject}}</h2>
+                      <h2 style="color: rgb(0, 79, 128); font-family: 'Times New Roman', Times, serif;">Instructions</h2>
+                      <ol>
+                          <li>Make sure that you have attempted all the questions before submission</li>
+                          <li>There will be 5 mcq type question.</li>
+                          <li>No negative marks</li>
+                          <li>No use of addtiotnal applications.</li>
+                          <li>Check your internet connection before staring the exam.</li>
+                      </ol>
+                     
+                    </div>
+              </div>
+              <br>
+              <br>
+              <center>
+                <a href="examPage?exam_subject={{examsubject}}&instructor_id={{instructor_id}}" ><button style="font-weight: bolder;" type="button">Start</button></a>
+            </center>
+          </div>
+          <div  class="col-md-3"></div>
+      </div>
+  </div>
+
+</body>

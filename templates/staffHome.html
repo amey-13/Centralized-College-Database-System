@@ -1,0 +1,69 @@
+{% include 'userNavbar1.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<meta charset="ISO-8859-1">
+
+<style>
+
+.bg-img {
+	background-image: url('https://img.freepik.com/premium-photo/lightbulb-glowing-book-dark-background-creative-thinking-idea-after-reading-study-concept_50039-3061.jpg');
+	height: 90.4vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.body{
+  overflow: hidden;
+}
+button {
+	color: orange;
+	background-color: black;
+	font-size: 19px;
+	border: 1px solid #2d63c8;
+	padding: 15px 50px;
+	cursor: pointer;
+	width:250px;
+}
+button:hover {
+	color: #2d63c8;
+	background-color: #ffffff;
+}
+a{
+	text-decoration: none;
+}
+</style>
+</head>
+
+
+
+<body>
+
+
+	<div style="margin-right: 0px;margin-left: 0px;" class="row" >
+	  <div style="padding-left: 0px;padding-right: 0px;text-align: center;margin-top: 170px;" class="col-md-5">
+
+		<!-- <a href="/adminElearn"><button type="button">Elearn</button></a>
+			<br>
+			<br>
+			<br> -->
+			<a href="/results"><button>Results</button></a>
+			<br>
+			<br>
+			<br>
+			<a href="/adminQuestions"><button>Exam Questions</button></a>
+			<br>
+			<br>
+			<br>
+			<a href="/adminassignment"><button>Assignments</button></a>
+	  </div>
+	  <div style="padding-left: 0px;padding-right: 0px;" class="col-md-7">
+			  <div class="container-fluid bg-img"></div>
+		  </div>
+	</div>
+  
+  </body>

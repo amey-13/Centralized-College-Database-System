@@ -1,0 +1,102 @@
+{% include 'adminNavbar1.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<meta charset="ISO-8859-1">
+
+<style>
+
+  body {
+    overflow: hidden;
+  }
+
+hr {
+  position: relative;
+  top: 5px;
+  border: none;
+  height: 4px;
+  background: black;
+  margin-bottom: 50px;
+}
+
+body {
+	overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+p{
+  text-align: justify;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+  color: darkslategray;
+}
+button {
+	color: green;
+	background-color: black;
+	font-size: 19px;
+	border: 1px solid #2d63c8;
+	padding: 10px 20px;
+	cursor: pointer;
+	width:300px;
+}
+button:hover {
+	color: black;
+	background-color: green;
+}
+h2{
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.9cm;
+  color: #2d63c8;
+}
+#bx {
+  width: 100%;
+  border: 4px solid black;
+  padding-top: 10px;
+}
+
+
+.bg-img {
+	background-image: url('https://img.freepik.com/premium-vector/set-hand-drawn-question-marks-isolated-white-background-vector-illustration_36380-433.jpg?w=360');
+	height: 100vh;
+	width: 70%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+
+
+  <div class="container-fluid" style="padding: 0;">
+    
+    {% set subjects=get_all_subject()%}
+     <div class="row">
+        <div class="col-md-8" >
+          <div class="container-fluid bg-img"></div>
+        </div>
+        <div class="col-md-4">
+            <br>
+            <div class="text-center h3" style="color: {{color}};">{{message}}</div>
+          <br>
+          <center>
+          <h1 style="color: rgb(75, 0, 128); font-family: 'Times New Roman', Times, serif;">Select Course</h1>
+          <br>
+          <br>
+          {%for subject in subjects['subjects']%}
+            <a href="adminQuestions1?subject={{subject}}" ><button style="font-weight: bolder;" type="button">{{subject}}</button></a>
+            <br>
+            <br>
+          {% endfor %}
+        </center>
+        </div>
+        
+      </div>
+  </div>
+</body>

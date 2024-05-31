@@ -1,0 +1,67 @@
+{% include 'Navbar.html' %}
+<script>
+    display(){
+      console(document.getElementById("name").value)
+    }
+</script>
+    <div class="container">
+      {%set subjects=get_subjectbystaff()%}
+        <div class="row">
+            <div class="card2 mt-3 p-3">
+                <div class="text-center h2 mt-3">User Registration</div>
+                <form action="userRegister1" method="post">
+                  <div class="row">
+                    <div class="container">
+                      <br>
+                      <div class="text-center h3" style="color: {{color}};">{{message}}</div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" id="name" onclick="display()" required placeholder="Enter Name" class="form-control">
+                     </div>
+                      <div class="col-md-6 mt-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" required placeholder="Enter Email" class="form-control">
+                     </div>
+                     <div class="col-md-6 mt-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="number" name="phone" id="phone" required placeholder="Enter Number" class="form-control">
+                     </div>
+                     <div class="col-md-6 mt-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" id="password" required placeholder="Enter Password" class="form-control">
+                     </div>
+                     <div class="col-md-6 mt-3">
+                     <label for="cars">Choose a Subject:</label>
+                     <select name="subject1" id="sub1" required placeholder="Select Subject" class="form-control">
+                      <option value="" selected data-default>Select Subject</option>
+                      {%for subject in subjects%}
+                      {% for i in subject['subjects']%}
+                      <option value="{'sub':'{{i}}','instructor_id':'{{subject['_id']}}'}">{{i}} by {{subject['name']}}</option>
+                      {% endfor %}
+                      {% endfor %}
+                    </select>
+                     </div>
+                     <div class="col-md-6 mt-3">
+                      <label for="cars">Choose a Subject</label>
+                       <select name="subject2" id="sub1" required class="form-control">
+                        <option value="" selected data-default>Select Subject</option>
+                        {%set subjects=get_subjectbystaff()%}
+                        {%for subject in subjects%}
+                        {% for i in subject['subjects']%}
+                        <option value="{'sub':'{{i}}','instructor_id':'{{subject['_id']}}'}">{{i}} by {{subject['name']}}</option>
+                        {% endfor %}
+                        {% endfor %}
+                       </select>
+                      </div>
+                     <div class="col-md-6 mt-5">
+                      <center>
+                        <input type="submit" value="&nbsp;&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;&nbsp;" class="btn btn-success mt-3">
+                      </center>
+                     </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

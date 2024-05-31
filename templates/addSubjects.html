@@ -1,0 +1,67 @@
+{% include 'adminNavbar1.html' %}
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="survey.css">
+
+    <meta charset="ISO-8859-1">
+    <style>
+        #cd {
+            background-color: white;
+            width: 100%;
+            height: 87vh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px black;
+            z-index: -50000000;
+            cursor: pointer;
+        }
+
+        .card2 {
+            background-color: white;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px black;
+            z-index: -50000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <br>
+        <br><br>
+        <br>
+        <div class="row">
+
+            <div class="col-md-4">
+            </div>
+            <div class=" col-md-4 ">
+                <center>
+                    <h1 style="color: {{color}}; font-family: 'Times New Roman', Times, serif;">{{message}}</h1>
+                </center>
+                <h1 style="color: rgb(75, 0, 128); font-family: 'Times New Roman', Times, serif;text-align: center;">Add
+                    Subject</h1>
+                <br>
+                <br>
+                <form action="addsubject" method="post">
+                    <center>
+
+                        <input style="width: 60%;" autofocus required type="text" class="form-control" id="subject"
+                            name="subject" />
+                    </center>
+                    <center>
+                        <br>
+                        <br>
+                        <input type="submit" value="&nbsp;&nbsp;&nbsp;&nbsp;submit&nbsp;&nbsp;&nbsp;&nbsp;"
+                            class="btn btn-success mt-3">
+                    </center>
+                </form>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</body>
